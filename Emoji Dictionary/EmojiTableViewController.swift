@@ -41,5 +41,13 @@ class EmojiTableViewController: UITableViewController {
 
         performSegue(withIdentifier: "ourSegue", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let emojiDefVC = segue.destination as! EmojiDetailedViewController
+        emojiDefVC.emoji = "we did it"
+    }
+
+    
+    
 
 }
